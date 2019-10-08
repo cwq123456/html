@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keyword" content="html,第一个html文件">
+    <meta name="description" content="html的第一个文件">
+    <meta name="generator" content="vs code">
+    <meta name="author" content="chen">
+    <meta http-equiv="page-enter" content="revealtrans(duration=3,transition=21)">
+    <title>第一个html文件</title>
+    <script language="JavaScript">
+        // function divControl(show){
+        //     window.event.cancelBubble=true;
+        //     var objID=event.srcElement.id; 
+        //     var index=objID.indexOf("_");
+        //     var mainID=objID.substring(0,index);
+        //     var numID=objID.substring(index+1);
+        //     if(mainID=="Tdiv"){
+        //         if(show==1){eval("showdiv("+"Div"+numID+")");}
+        //         else{eval("hidediv("+"Div"+numID+")");}
+        //     }
+
+        // }
+        // var nbottom=0,speed=2;
+        // function displayMenu(obj){
+        //     obj.style.clip="rect(0 100%"+nbottom+"% 0)";
+        //     nbottom+=speed;
+        //     if(nbottom<=100){
+        //         timerID=setTimeout("displayMenu("+obj.id+"),1");
+        //     }
+        //     else clearTimeout(timerID);
+        // }
+        // function showdiv(obj){
+        //     obj.style.display="block";
+        //     obj.style.clip="rect(0 0 0 0)";
+        //     nbottom=5;
+        //     displayMenu(obj);
+        // }
+        // function hidediv(obj){
+        //     nbottom=0;
+        //     obj.style.style="none";
+        // }
+        // function keepstyle(obj){
+        //     obj.style.display="block";
+        // }
+            function toggleDisplay(me){
+            if(me.style.display=="block"){
+                me.style.display="inline";
+                alert("文本现在是：‘inline’.");
+            }
+            else{
+                if(me.style.display=="inline"){
+                    me.style.display="none";
+                    alert("文本现在是：‘none’.3秒后自动重新显示");
+                    window.setTimeout("blueText.style.display='block';",3000,"JavaScript");
+                }
+                else{
+                    me.style.display="block";
+                    alert("文本现在是：'block'.")
+                }
+            }
+            } 
+            </script>
+</head>
+<body  link="#FF0000" alink="#99FF00" vlink="#CCCCCC">
+    <!-- <style typed="text/css">
+    .menubar{
+        position: absolute;
+        top:10px;
+        width:100px;
+        height: 20px;
+        cursor:default;
+        border-width: 1px;
+        border-style: outset;
+        color: #99FFFF;
+        background: #669900;
+    }
+    .menu{
+        position: absolute;
+        top:32px;
+        width:140px;
+        display: none;
+        
+        border-width: 2px;
+        border-style: outset;
+        border-color: white silver silver white;
+     color: #99FFFF;
+        background: #333399; 
+        padding:15px;
+    }
+    .menu A{
+        text-decoration: none;
+        color:#99FFFF;
+    }
+    .menu A:hover{
+        color: #FFFFFF;
+    }
+    </style>
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size:15px">
+<tr>
+    <td width="20%">
+        <div align="center" id="Tdiv_1" class="menuber" onmouseover="divControl(1)" onmouseout="divControl(0)">
+        教育网站</div>
+    </td>
+    <td width="20%">
+            <div align="center" id="Tdiv_2" class="menuber" onmouseover="divControl(1)" onmouseout="divControl(0)">
+                电脑丛书网站</div>
+    </td>
+    <td width="20%">
+            <div align="center" id="Tdiv_3" class="menuber" onmouseover="divControl(1)" onmouseout="divControl(0)">
+                新出图书</div>
+    </td>
+    <td width="20%">
+            <div align="center" id="Tdiv_4" class="menuber" onmouseover="divControl(1)" onmouseout="divControl(0)">
+                其他网站</div>
+    </td>
+</tr>
+<tr>
+    <td width="20%">
+        <div align="left" id="Div1" class="menu" onmouseover="keepstyle(this)" onmouseout="hidediv(this)">
+        <a href="#">重庆XX大学</a><br>
+        <a href="#">长春XX大学</a><br>
+        <a href="#">吉林XX大学</a>
+        </div>
+    </td>
+    <td width="20%">
+            <div align="left" id="Div2" class="menu" onmouseover="keepstyle(this)" onmouseout="hidediv(this)">
+            <a href="#">VB图书</a><br>
+            <a href="#">JScript图书</a><br>
+            <a href="#">JAVA图书</a>
+            </div>
+        </td>
+        <td width="20%">
+                <div align="left" id="Div3" class="menu" onmouseover="keepstyle(this)" onmouseout="hidediv(this)">
+                        <a href="#">Delphi XX图书</a><br>
+                        <a href="#">JScript图书</a><br>
+                        <a href="#">JAVA图书</a>
+                </div>
+            </td>
+            <td width="20%">
+                    <div align="left" id="Div4" class="menu" onmouseover="keepstyle(this)" onmouseout="hidediv(this)">
+                    <a href="#">科技主页</a><br>
+                    <a href="#">科技图书网</a><br>
+                    <a href="#">技术支持网</a>
+                    </div>
+                </td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<br> -->
+
+    <h2 align="center">古诗</h2>
+    <hr>
+    <ol type="1">
+    <li><strong>我欲乘风归去，又恐琼楼玉宇，高处不胜寒 —— 宋 · 苏轼《水调歌头·明月几时有》
+        </strong><br></li>
+        <li><em>爆竹声中一岁除，春风送暖入屠苏 —— 宋 · 王安石《元日》</em><br></li>
+    </ol>
+    <form action="mail;1782845901@qq.com" method="get" name="register">
+        姓名：<input type="text" name="username" size="20"/>
+        <br><br>
+        网址：<input type="text" name="URL" size="20" maxlength="50" value="http://"/>
+    </form>
+    <br><br>
+        <a href="test.html">跳转</a>
+        <img dynsrc="Desktop\html/shipin.avi">
+      <table align="center" border="2" bordercolor="#0099FF" cellspacing="3" cellpadding="10" width="400" height="400">
+          <caption align="topn">表格标记</caption>
+          <tr>
+              <th>标记</th>
+              <th>描述</th>
+          </tr>
+          <tr align="center">
+              <td>table</td>
+              <td>表格标记</td>
+          </tr>
+          <tr align="center">
+              <td>tr</td>
+              <td>行标记</td>
+          </tr>
+          <tr>
+              <td>td</td>
+              <td>设置所使用的脚本语言，此属性已代表language属性</td>
+          </tr>
+      </table>
+      
+      <div>在<span id="blueText" onclick="toggleDisplay(this)"
+    style="color:blue;position:relative";cursor:hand;">蓝色</span>文字上点击来查看效果</div>
+</body>
+</html>
