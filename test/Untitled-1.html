@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +13,40 @@
     <meta http-equiv="page-enter" content="revealtrans(duration=3,transition=21)">
     <title>第一个html文件</title>
     <script language="JavaScript">
-        
+        // function divControl(show){
+        //     window.event.cancelBubble=true;
+        //     var objID=event.srcElement.id; 
+        //     var index=objID.indexOf("_");
+        //     var mainID=objID.substring(0,index);
+        //     var numID=objID.substring(index+1);
+        //     if(mainID=="Tdiv"){
+        //         if(show==1){eval("showdiv("+"Div"+numID+")");}
+        //         else{eval("hidediv("+"Div"+numID+")");}
+        //     }
+
+        // }
+        // var nbottom=0,speed=2;
+        // function displayMenu(obj){
+        //     obj.style.clip="rect(0 100%"+nbottom+"% 0)";
+        //     nbottom+=speed;
+        //     if(nbottom<=100){
+        //         timerID=setTimeout("displayMenu("+obj.id+"),1");
+        //     }
+        //     else clearTimeout(timerID);
+        // }
+        // function showdiv(obj){
+        //     obj.style.display="block";
+        //     obj.style.clip="rect(0 0 0 0)";
+        //     nbottom=5;
+        //     displayMenu(obj);
+        // }
+        // function hidediv(obj){
+        //     nbottom=0;
+        //     obj.style.style="none";
+        // }
+        // function keepstyle(obj){
+        //     obj.style.display="block";
+        // }
             function toggleDisplay(me){
             if(me.style.display=="block"){
                 me.style.display="inline";
@@ -119,7 +154,10 @@
 <br>
 <br>
 <br> -->
+<marquee direction="right" loop="1"><font face="隶书" color="#0066FF" size="6">我的第一个html程序</font></marquee>
 
+
+<embed src="../video/bgmusic.mp3">
     <h2 align="center">古诗</h2>
     <hr>
     <ol type="1">
@@ -130,7 +168,21 @@
     <form action="mail;1782845901@qq.com" method="get" name="register">
         姓名：<input type="text" name="username" size="20"/>
         <br><br>
+        密码：<input name="txt_passwd" type="password" class="textbox" id="txt_passwd" size="12" maxlength="50"
+        oncopy="return false" oncut="return false" onpause="return false" style="font-family: Wingdings;"/>
+        <br><br>
         网址：<input type="text" name="URL" size="20" maxlength="50" value="http://"/>
+        <br><br>
+        <label for="city">选择城市：</label>&nbsp;&nbsp;&nbsp;
+        <select name="city" id="city">
+            <option value="beijing" selected="selected">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="xiangtan">湘潭</option>
+        </select>
+        <br><br>
+        <input type="file" name="file"/><br><br>
+        <input type="submit" name="submit" value="提交表单（特殊按钮）"/> <input type="reset" name="CZ" value="重置按钮"/>
+
     </form>
     <br><br>
         <a href="test.html">跳转</a>
