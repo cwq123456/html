@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+    var  db=openDatabase('mydb','1.0','my database',2*1024*1024)
+    db.transaction(function(tx){
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MsgData(name TEXT,msg TEXT,time INTEGER)',[]);
+    })
+    getE('clear').onclick=function()
+    {
+        db.transaction(function(tx){
+            tx.executeSql('DROP TABLE MsgData',[]);
+        })
+        showAllData()
+    }
+    getE('save').onclick=function(){
+        saveDate();
+        return false;
+    }
+      function removeAllData()
+      {
+          for(var i=datalist.chlidren.length-1;i>=0;i--){
+              datalist.removeChild(datalist.chlidren[i]);
+          }
+      }
+      function showData(row){
+          var dt=document.createElement('dt');
+          dt.innerHTML=row.name;
+          var dd=document.createElement('dd');
+          dd.innerHTML=row.msg;
+          var t=new Date();
+          t.setTime(row.time);
+          tt.innerHTML=t.toLocaleDateString()+""+t.toLocaleTimeString();
+          datalist.appendChild(dt);
+          datalist.appendChild(dd);
+          datalist.appendChild(tt);
+      }
+      function showAllData()
+      {
+          db,transaction(function(tx)
+          {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS MsgData(name TEXT,msg TEXT,time INTEGER)',[]);
+            tx.executeSql('SELECT * FROM MsgData',[],function(tx,result){
+                removeAllData();
+                for(var i=0;i<result.row.length;i++){
+                    showData(result.rows.item(i));
+                }
+            });
+          });
+      }
+      function addData(name,msg,time)
+      {
+          db.transaction(function(tx){
+            tx.executeSql('INSERT INTO MsgData VALUES(?,?,?)',[name,msg,time],function(tx,result)
+            {
+                alert("登录成功");
+            },
+            function(tx,error){
+                alert(error.source+':'+error.message);
+            }); 
+          });
+      }
+      function saveDate()
+      {
+          var name=getE('name').value;
+          var msg=getE('msg').value;
+          var time=new Date().getTime();
+          addData(name,msg,time);
+          showAllData();
+      }
+        </script>
+    <title>登陆</title>
+</head>
+<body>
+    <form action="#" method="GET" accept-charset="utf-8">
+        <p class="form_item">
+            用户名：<input type="text" name="" value="" id="name" required/>
+        </p>
+        <p class="form_item">
+            密码：<input name="" type="password"id="msg" required></textarea>
+        </p>
+        <p class="form_item">
+            <input type="submit" id="save" value="登陆"/>
+            <input type="submit" id="clear" value="注销"/>
+        </p>
+        <hr>
+    </form>
+</body>
+</html>

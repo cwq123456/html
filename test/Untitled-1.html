@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +11,7 @@
     <meta name="author" content="chen">
     <meta http-equiv="page-enter" content="revealtrans(duration=3,transition=21)">
     <title>第一个html文件</title>
+    <link rel="stylesheet" href="text.css" type="text/css" />
     <script language="JavaScript">
         // function divControl(show){
         //     window.event.cancelBubble=true;
@@ -64,6 +64,14 @@
                 }
             }
             } 
+            function ShowFileType(){
+                var file;
+                file=document.getElementById("file").files[0];
+                var size=document.getElementById("size");
+                size.innerHTML=file.size;
+                var type=document.getElementById("type");
+                type.innerHTML=file.type;
+            }
             </script>
 </head>
 <body  link="#FF0000" alink="#99FF00" vlink="#CCCCCC">
@@ -156,23 +164,28 @@
 <br> -->
 <marquee direction="right" loop="1"><font face="隶书" color="#0066FF" size="6">我的第一个html程序</font></marquee>
 
-
-<embed src="../video/bgmusic.mp3">
-    <h2 align="center">古诗</h2>
+<object classid="22D6F312-B0F6-11D0-94AB-0080C74C7E95" width="530" height="375">
+    <param name="FileName" value="../video/bgmusic.mp3"/>
+    <embed src="../video/bgmusic.mp3">
+</object>
+<details>
+    <summary><h2 align="center">古诗</h2></summary>
     <hr>
     <ol type="1">
     <li><strong>我欲乘风归去，又恐琼楼玉宇，高处不胜寒 —— 宋 · 苏轼《水调歌头·明月几时有》
         </strong><br></li>
         <li><em>爆竹声中一岁除，春风送暖入屠苏 —— 宋 · 王安石《元日》</em><br></li>
     </ol>
+    </details>
     <form action="mail;1782845901@qq.com" method="get" name="register">
         姓名：<input type="text" name="username" size="20"/>
         <br><br>
         密码：<input name="txt_passwd" type="password" class="textbox" id="txt_passwd" size="12" maxlength="50"
         oncopy="return false" oncut="return false" onpause="return false" style="font-family: Wingdings;"/>
         <br><br>
-        网址：<input type="text" name="URL" size="20" maxlength="50" value="http://"/>
+        网址：<input type="text" name="URL" size="20" maxlength="50"  placeholder="http://"/>
         <br><br>
+        日期：<input name="data1" type="data" value="2019-10-10"/><br/><br/>
         <label for="city">选择城市：</label>&nbsp;&nbsp;&nbsp;
         <select name="city" id="city">
             <option value="beijing" selected="selected">北京</option>
@@ -180,7 +193,10 @@
             <option value="xiangtan">湘潭</option>
         </select>
         <br><br>
-        <input type="file" name="file"/><br><br>
+        <input type="file" name="file" id="file"/>
+        <input type="button" value="显示文件信息" onclick="ShowFileType();"/><br><br>
+        文件字节长度：<span id="size"></span><br>
+        文件类型：<span id="type"></span><br>
         <input type="submit" name="submit" value="提交表单（特殊按钮）"/> <input type="reset" name="CZ" value="重置按钮"/>
 
     </form>
