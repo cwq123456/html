@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript">
-    var  db=openDatabase('mydb','1.0','my database',2*1024*1024)
+    var  db=openDatabase('myData','1.0','test database',1024*1024);
     db.transaction(function(tx){
         tx.executeSql('CREATE TABLE IF NOT EXISTS MsgData(name TEXT,msg TEXT,time INTEGER)',[]);
     })
@@ -14,7 +14,7 @@
         db.transaction(function(tx){
             tx.executeSql('DROP TABLE MsgData',[]);
         })
-        showAllData()
+        showAllData();
     }
     getE('save').onclick=function(){
         saveDate();
@@ -31,6 +31,7 @@
           dt.innerHTML=row.name;
           var dd=document.createElement('dd');
           dd.innerHTML=row.msg;
+          var tt=document.createElement('tt');
           var t=new Date();
           t.setTime(row.time);
           tt.innerHTML=t.toLocaleDateString()+""+t.toLocaleTimeString();
@@ -72,15 +73,15 @@
           showAllData();
       }
         </script>
-    <title>登陆</title>
+    <title>登录</title>
 </head>
 <body>
-    <form action="#" method="GET" accept-charset="utf-8">
+    <form action="#" method="get" accept-charset="utf-8">
         <p class="form_item">
             用户名：<input type="text" name="" value="" id="name" required/>
         </p>
         <p class="form_item">
-            密码：<input name="" type="password"id="msg" required></textarea>
+            密码：<input name="" type="password" value="" id="msg" required></textarea>
         </p>
         <p class="form_item">
             <input type="submit" id="save" value="登陆"/>
