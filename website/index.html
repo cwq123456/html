@@ -8,10 +8,23 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
+    <script type="text/javascript">
+    
+    $(function(){
+        $(".accordion dt").toggle(function(){
+            $(this).next().slideDown();
+        },function(){
+            $(this).next().slideUp();
+        });
+    })
+    </script>
+    <script type="text/javascript">Cufon.now();</script>
 </head>
-<body>
-    <header>
-        <div class="logo">
+<body id="all">
+    <header class="wrap">
+        <div id="logo">
+            <img src="images/zhuye.png">
             <h2>我爱<strong>科大</strong></h2>
         </div>
         <nav>
@@ -27,8 +40,8 @@
         </nav>
         <div class="rap">
             <a href="#"><img src="images/big-img1.jpg" alt="" width="571" height="398"></a>
-            <!-- <a href="#"><img src="images/big-img2.jpg" alt="" width="571" height="398"></a> -->
-            <!-- <a href="#"><img src="images/big-img3.jpg" alt="" width="571" height="398"></a> -->
+            <a href="#"><img src="images/big-img2.jpg" alt="" width="571" height="398"></a>
+            <a href="#"><img src="images/big-img3.jpg" alt="" width="571" height="398"></a>
         </div>
         <ul class="pagination">
             <li>
@@ -72,10 +85,96 @@
             </li>
         </ul>
     </header>
-    <section id="content">
-        <article></article>
+    <section id="maincontent" class="grid_10">
+        <article>
+            <h2>湖南科技大学欢迎你</h2>
+            <h3>湖南科技大学（Hunan University of Science and Technology）坐落在伟人故里、人文圣地湘潭，处于长株
+                潭核心区域，比邻湘潭九华经济技术开发区（国家级），是应急管理部、国家国防科技工业局与湖南省人民政府共
+                建高校、“十三五”国家百所中西部高校基础能力建设工程支持高校、国家大学生文化素质教育基地、教育部本科教
+                学工作水平评估“优秀”高校、教育部“卓越工程师教育培养计划”高校以及全国首批“创新创业50强高校”、全国毕业
+                生就业工作50强高校；有推荐优秀应届本科毕业生免试攻
+                读研究生权以及港澳台和留学生招生权。</h3>
+                <h4>学校肇始于1949年8月成立的湘北建设学院，2003年11月经教育部和湖南省人民政府批准，由湘潭工学院（原
+                    煤炭工业部在长江以南地区惟一的部属高校湘潭矿业学院 [2]  更名）与湖南省第二所本科师范类高校湘潭师
+                    范学院合并组建而成。 </h4>
+                    <p>[1]  截至2017年5月，学校占地面积3107亩，建筑面积110余万平方米，设有19个教学院及研究生院、独
+                        立学院、继续教育学院、国际教育学院，有90个本科专业，5个博士学位授权一级学科，29个硕士学位授
+                        权一级学科， [1]  教职工3500余人，其中专任教师1646人、正高职称370人、博士学位教师838人。</p>
+                        <a href="#" class="button">更多</a>
+        </article>
+        <article class="last">
+            <h2>校训: 唯实惟新，至诚致志</h2>
+            <h5>“唯实惟新”中的“唯”、“惟”相通，是“独、只有”、“为、是”之意。“唯实”指严谨治学，体现了追求真理的科学精神。
+                “惟新”是追求创新之意，体现了与时俱进的时代精神。“至诚致志”中的“至诚”，指道德修养的最高境界，强调以诚相
+                待，和谐相处。“致志”指聚精会神，含咏孕育，尽心尽力，从而实现确立的志向和目标。“唯实惟新，至诚致志”倡导
+                严谨治学，坚持与时俱进，崇尚以德为先，强调全力以赴，传承了湖湘文化传统，彰显了现代大学精神。</h5>
+                <ul class="img-list clearfix">
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/f_thumb1.jpg" alt=""></a></li>
+                </ul>
+        </article>
     </section>
-    <aside></aside>
-    <footer></footer>
+    <aside class="grid_6">
+        <div class="prefix_1">
+            <article>
+                <div class="box">
+                    <h2>湖南科技大学</h2>
+                    <dl class="accordion">
+                        <dt><img src="images/zhuye.png" alt="" style='width:3%'><a href="#">图书馆</a></dt>
+                        <dd>湖南科技大学图书馆：截至2013年10月，该校图书馆建筑面积35944平方米，
+                            其中南校区图书馆建筑面积为24855平方米，北校区图书馆建筑面积为11089平方米。
+                            图书馆共设书库或阅览室33个，阅览席位3600多席，其中电子阅览席位330席。</dd>
+                            <dt><img src="images/zhuye.png" alt="" style='width:3%'><a href="#">南校区</a></dt>
+                        <dd>湖南科技大学图书馆：截至2013年10月，该校图书馆建筑面积35944平方米，
+                            其中南校区图书馆建筑面积为24855平方米，北校区图书馆建筑面积为11089平方米。
+                            图书馆共设书库或阅览室33个，阅览席位3600多席，其中电子阅览席位330席。</dd>
+                            <dt><img src="images/zhuye.png" alt="" style='width:3%'><a href="#">南校区</a></dt>
+                        <dd>湖南科技大学图书馆：截至2013年10月，该校图书馆建筑面积35944平方米，
+                            其中南校区图书馆建筑面积为24855平方米，北校区图书馆建筑面积为11089平方米。
+                            图书馆共设书库或阅览室33个，阅览席位3600多席，其中电子阅览席位330席。</dd>
+                            <dt><img src="images/zhuye.png" alt="" style='width:3%'><a href="#">南校区</a></dt>
+                        <dd>湖南科技大学图书馆：截至2013年10月，该校图书馆建筑面积35944平方米，
+                            其中南校区图书馆建筑面积为24855平方米，北校区图书馆建筑面积为11089平方米。
+                            图书馆共设书库或阅览室33个，阅览席位3600多席，其中电子阅览席位330席。</dd>
+                            <dt><img src="images/zhuye.png" alt="" style='width:3%'><a href="#">南校区</a></dt>
+                        <dd>湖南科技大学图书馆：截至2013年10月，该校图书馆建筑面积35944平方米，
+                            其中南校区图书馆建筑面积为24855平方米，北校区图书馆建筑面积为11089平方米。
+                            图书馆共设书库或阅览室33个，阅览席位3600多席，其中电子阅览席位330席。</dd>
+                    </dl>
+                </div>
+            </article>
+            <article class="last">
+                <h2>湖南科技大学</h2>
+                <p><img src="images/big-img1.jpg" alt="" style='width:30%'></p>
+                <div class="wrapper">
+                    <ul class="list1 geid_3 alpha">
+                        <li><a href="#">图书馆</a></li>
+                        <li><a href="#">图书馆</a></li>
+                        <li><a href="#">图书馆</a></li>
+                    </ul>
+                    <ul class="list1 geid_2 omega">
+                            <li><a href="#">图书馆</a></li>
+                            <li><a href="#">图书馆</a></li>
+                            </ul>
+                </div>
+            </article>
+        </div>
+    </aside>
+    <footer>
+        <div class="container_16">
+            <div id="main">
+                版权所有：<strong>陈蔚群</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                地址：湖南科技大学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                电话：183XXXXXXXX
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
